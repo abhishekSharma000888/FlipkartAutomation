@@ -13,12 +13,23 @@ public class CartPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(css = "a._3SkBxJ")
     WebElement cartLink;
     @FindBy(css = "a._3i47xR")
     WebElement productNameDisplay;
-    public void openCart() { cartLink.click(); }
+
+    public void openCart() {
+        cartLink.click();
+    }
+
     public boolean isProductInCart(String productName) {
         return productNameDisplay.getText().contains(productName);
     }
+
+    public void removeFirstProduct() {
+    }
+
+
+
 }

@@ -18,4 +18,6 @@ public class SearchResultsPage {
     @FindBy(css = "a._1fQZEK")
     List<WebElement> productLinks;
     public void clickFirstProduct() { productLinks.get(0).click(); }
+
+
 }
